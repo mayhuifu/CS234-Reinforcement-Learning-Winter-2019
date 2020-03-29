@@ -13,3 +13,17 @@ Action choices are made based on value judgments. We seek actions that bring abo
 A model of the environment. This is something that mimics the behavior of the environment, or more generally, that allows inferences to be made about how the environment will behave.
 
 The artificial neural network provides the program with the ability to generalize from its experience, so that in new states it selects moves based on information saved from similar states faced in the past, as determined by its network. How well a reinforcement learning system can work in problems with such large state sets is intimately tied to how appropriately it can generalize from past experience.
+
+A RL agent will have a:
+1) Policy: is map from state to action. It's a function of the agent's action. For a Deterministic policy: a = π(s)
+Stochastic policy: π(a|s) = P[At = a|St = s]
+
+2) Value function: Value function is a prediction of future reward and is used to evaluate the goodness/badness of states
+And therefore to select between actions, e.g. vπ(s) = Eπ [Rt+1 + γRt+2 + γ2Rt+3 + ... | St = s]
+
+3) model: A model predicts what the environment will do next
+P predicts the next state
+R predicts the next (immediate) reward, e.g.
+Pass0 = P[St+1 = s0| St = s, At = a]
+Ras = E [Rt+1 | St = s, At = a
+
