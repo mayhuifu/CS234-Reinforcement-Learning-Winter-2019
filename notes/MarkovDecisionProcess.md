@@ -27,3 +27,11 @@ R predicts the next (immediate) reward, e.g.
 Pass0 = P[St+1 = s0| St = s, At = a]
 Ras = E [Rt+1 | St = s, At = a
 
+Bellman Equation:
+Value of the current state = immeidiate reward + the value of the next state
+
+v(s) = E [Gt| St = s]
+     = E [Rt+1 + γRt+2 + γ2Rt+3 + ... | St = s]
+     = E [Rt+1 + γ (Rt+2 + γRt+3 + ...) | St = s]
+     = E [Rt+1 + γGt+1 | St = s]
+     = E [Rt+1 + γv(St+1) | St = s]
