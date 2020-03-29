@@ -28,7 +28,7 @@ Pass0 = P[St+1 = s0| St = s, At = a]
 Ras = E [Rt+1 | St = s, At = a
 
 Bellman Equation:
-Value of the current state = immeidiate reward + the value of the next state
+Value of the current state = immeidiate reward + disacount factor * the value of the next state
 
 v(s) = E [Gt| St = s]
 
@@ -36,3 +36,5 @@ v(s) = E [Gt| St = s]
      = E [Rt+1 + γ (Rt+2 + γRt+3 + ...) | St = s]
      = E [Rt+1 + γGt+1 | St = s]
      = E [Rt+1 + γv(St+1) | St = s]
+
+v(s) = Rs + γXs0∈SPss0v(s0)
